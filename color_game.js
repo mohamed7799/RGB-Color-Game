@@ -1,4 +1,5 @@
 'use strict'
+//tesst
 //variables
 let hard=document.getElementById("hard");
 let easy=document.getElementById("easy");
