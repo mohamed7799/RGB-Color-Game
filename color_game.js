@@ -17,6 +17,8 @@ function genColor(){
 }
 
 function NEW(){
+    tryAgian.style.visibility="hidden";
+    tryAgian.textContent="try agian";
     Header.style.backgroundColor="";
     let temp;
     //hard
