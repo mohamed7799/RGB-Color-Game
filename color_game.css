@@ -58,7 +58,14 @@ footer{
     transition: .5s linear;
 }
 
-#navbar *:hover{
+#navbar #new:hover{
+    background-color: rgb(73, 194, 194);
+    color:white;
+    cursor: pointer;
+}
+
+#navbar #mode *:hover{
+
     background-color: rgb(73, 194, 194);
     color:white;
     cursor: pointer;

@@ -6,6 +6,7 @@ let colors=document.getElementsByClassName("color");
 let New =document.getElementById("new");
 let winColor=document.getElementById("win-color");
 let Header=document.getElementById("head");
+let tryAgian=document.getElementById("wrong");
 //functions
 function genColor(){
     let arrColor =[];
@@ -100,7 +101,7 @@ function check(){
     
     else{
         this.classList.add("hide");
-        
+        tryAgian.style.visibility="visible";
     }
 }
 
