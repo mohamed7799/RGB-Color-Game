@@ -79,6 +79,7 @@ function Easy(){
 
 function check(){
     if(this.style.backgroundColor==winColor.innerText){
+        tryAgian.style.visibility="visible";
         tryAgian.textContent="You Won";
         //hard mode
         if(hard.classList.contains("selected")){
