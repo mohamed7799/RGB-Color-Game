@@ -80,7 +80,10 @@ function Easy(){
 
 function check(){
     if(this.style.backgroundColor==winColor.innerText){
+<<<<<<< HEAD
         tryAgian.style.visibility="visible";
+=======
+>>>>>>> 4e6cf7c3d88ae4d74f6f93a35fd9d5ff18a51bb4
         tryAgian.textContent="You Won";
         //hard mode
         if(hard.classList.contains("selected")){
