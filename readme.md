@@ -2,7 +2,7 @@
 
 ----------------------
 
-Choose the right color
+Choose The right color
 
 You have 2 modes
 
