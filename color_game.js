@@ -1,5 +1,5 @@
 'use strict'
-//variable
+//variables
 let hard=document.getElementById("hard");
 let easy=document.getElementById("easy");
 let colors=document.getElementsByClassName("color");
