@@ -3,6 +3,7 @@
 let hard=document.getElementById("hard");
 let easy=document.getElementById("easy");
 let colors=document.getElementsByClassName("color");
+let Colors=document.getElementById("colors");
 let New =document.getElementById("new");
 let winColor=document.getElementById("win-color");
 let Header=document.getElementById("head");
@@ -77,8 +78,17 @@ function Easy(){
     }
 }
 
-function check(){
-    if(this.style.backgroundColor==winColor.innerText){
+//eventlisteners
+
+hard.addEventListener("click",Hard);
+
+easy.addEventListener("click",Easy);
+
+New.addEventListener("click",NEW);
+
+Colors.addEventListener("click",function(e){
+    let x=e.target;
+    if(x.style.backgroundColor==winColor.innerText){
 
         tryAgian.style.visibility="visible";
 
@@ -90,9 +100,9 @@ function check(){
             if(colors[i].classList.contains("hide")){
                 colors[i].classList.remove("hide");
             }
-            colors[i].style.backgroundColor=this.style.backgroundColor;
+            colors[i].style.backgroundColor=x.style.backgroundColor;
         }
-        Header.style.backgroundColor=this.style.backgroundColor;
+        Header.style.backgroundColor=x.style.backgroundColor;
         }
         //easy mode
         else{
@@ -100,29 +110,17 @@ function check(){
                 if(colors[i].classList.contains("hide")){
                     colors[i].classList.remove("hide");
                 }
-                colors[i].style.backgroundColor=this.style.backgroundColor;
+                colors[i].style.backgroundColor=x.style.backgroundColor;
             }
-            Header.style.backgroundColor=this.style.backgroundColor;
+            Header.style.backgroundColor=x.style.backgroundColor;
         }
     }
     
     else{
-        this.classList.add("hide");
+        x.classList.add("hide");
         tryAgian.style.visibility="visible";
     }
-}
-
-//eventlisteners
-
-hard.addEventListener("click",Hard);
-
-easy.addEventListener("click",Easy);
-
-New.addEventListener("click",NEW);
-
-for(let i=0;i<colors.length;i++){
-    colors[i].addEventListener("click",check);
-}
+});
 
 //main
 
