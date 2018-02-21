@@ -88,6 +88,10 @@ New.addEventListener("click",NEW);
 
 Colors.addEventListener("click",function(e){
     let x=e.target;
+    //to make sure that the clicked item belong to Colors
+    if (x.className != 'color') return;
+
+    //win
     if(x.style.backgroundColor==winColor.innerText){
 
         tryAgian.style.visibility="visible";
@@ -115,7 +119,7 @@ Colors.addEventListener("click",function(e){
             Header.style.backgroundColor=x.style.backgroundColor;
         }
     }
-    
+    //lose
     else{
         x.classList.add("hide");
         tryAgian.style.visibility="visible";
