@@ -69,7 +69,7 @@ function clickMode(onMode, ofMode) {
     }
 }
 
-function winMode(mode) {
+function winMode(mode, x) {
     for (let i = 0; i < mode; i++) {
         if (colors[i].classList.contains("hide")) {
             colors[i].classList.remove("hide");
@@ -98,11 +98,11 @@ Colors.addEventListener("click", function (e) {
         tryAgian.textContent = "You Won";
         //hard mode
         if (hard.classList.contains("selected")) {
-            winMode(6);
+            winMode(6, x);
         }
         //easy mode
         else {
-            winMode(3);
+            winMode(3, x);
         }
     }
     //lose

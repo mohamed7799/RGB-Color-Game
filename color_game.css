@@ -1,123 +1,126 @@
-*{
+* {
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
 }
 
 /*globel*/
-body{
+
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
     font-family: Arial, Helvetica, sans-serif;
     background-color: rgb(23, 24, 30);
+    display: flex;
+    flex-direction: column;
 }
-.flex{
+
+.flex {
     display: flex;
 }
 
-.grid{
+.grid {
     display: grid;
 }
 
-
-
-header{
+header {
     color: white;
     padding: 20px 0px;
     text-align: center;
-    background-color: rgb(73, 194, 194)
+    background-color: rgb(73, 194, 194);
+    transition: .3s;
 }
 
-header *{
+header * {
     padding-bottom: 10px;
 }
 
-.color{
-    background-color: blue;
-    border-radius: 5px;
+.color {
+    border-radius: 50%;
+    cursor: pointer;
+    transition: .5s;
+    opacity: 1;
 }
 
-footer{
+.color:hover {
+    border: 5px solid white;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+footer {
     justify-content: center;
     align-items: center;
     padding: 20px;
     background-color: rgb(73, 194, 194);
     color: white;
     font-weight: bold;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    
+    margin-top: auto;
 }
 
 /*IDs*/
-#navbar{
+
+#navbar {
     background-color: white;
     color: rgb(73, 194, 194);
     justify-content: space-evenly;
     padding: 0px 10px;
     font-weight: bold;
-    transition: .5s linear;
 }
 
-#navbar #new:hover{
+#navbar *:hover {
     background-color: rgb(73, 194, 194);
-    color:white;
+    color: white;
     cursor: pointer;
 }
 
-#navbar #mode *:hover{
-
-    background-color: rgb(73, 194, 194);
-    color:white;
-    cursor: pointer;
-}
-
-#navbar  p ,#mode *{
+#navbar p, #mode * {
     padding: 10px;
+    transition: .3s;
 }
 
-#wrong{
+#wrong {
     visibility: hidden;
 }
 
-#mode *{
+#mode * {
     display: inline-block;
 }
 
-#mode #hard{
+#mode #hard {
     padding-left: 10px;
 }
 
-#colors{
-    width: 50%;
-    margin: 50px auto;
-    grid-template-columns: repeat(3,150px);
+#colors {
+    grid-template-columns: repeat(3, 150px);
     grid-auto-rows: 150px;
-    grid-gap: 10px;
-    justify-content: center;
-
+    grid-gap: 1rem;
 }
+
 /* class to add with javascript*/
-.selected{
+
+.selected {
     background-color: rgb(73, 194, 194);
-    color:white;
+    color: white;
 }
 
-.hide{
-    visibility: hidden;
+.hide {
+    opacity: 0;
 }
 
 /*media*/
 
 @media screen and (max-width:500px) {
-    #colors{
-        grid-template-columns: repeat(3,100px);
-        grid-auto-rows: 100px;
-        grid-gap: 10px;
-       
-    }
-    footer{
-        position: fixed;
-        bottom: 0;
-        width: 100%;
+    #colors {
+        grid-template-columns: repeat(3, 70px);
+        grid-auto-rows: 70px;
     }
 }
